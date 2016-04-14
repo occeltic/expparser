@@ -46,6 +46,7 @@ outputfile.txt will contain a series of operations and substitutions followed by
 \#11 = #10^3
 
 \#12 = #9-#11
+
 ---Assembly Token---
 
 
