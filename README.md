@@ -21,8 +21,8 @@ inputfile.txt should contain a comma separated list of bracketed  infix algebrai
 
 outputfile.txt will contain a series of operations and substitutions followed by a list telling you which lines refer to the elements in the initial expression list. For the simple example above it would look like:
 
-#0 = x+y
-#1 = #0^2
+\#0 = x+y
+\#1 = #0^2
 #2 = x+z
 #3 = #2^3
 #4 = #1+#3
