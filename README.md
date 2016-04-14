@@ -19,6 +19,7 @@ Once compiled, syntax is as follows:
 ~$ ./expparser < inputfile.txt > outputfile.txt
 
 inputfile.txt should contain a comma separated list of bracketed  infix algebraic expressions, i.e.:
+
 [(x+y)^2+(x+z)^3], [2*(x+z)^2 - (x+y)^3], [-(x+y)^2 - (z-x)^3]
 
 outputfile.txt will contain a series of operations and substitutions followed by a list telling you which lines refer to the elements in the initial expression list. For the simple example above it would look like:
