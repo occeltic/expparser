@@ -52,13 +52,10 @@ outputfile.txt will contain a series of operations and substitutions followed by
 ---Operand Stack---
 ---Expression List---
 ---Expression 0---
-
 \#4
 ---Expression 1---
-
 \#8
 ---Expression 2---
-
 \#12
 
 How expparser.c does this is by building tree representations of each algebraic expression, and then iteratively substituting for the most common subtree in the collection of trees. There is support for the associative property (i.e. x+y is equivalent to y+x) but it won't do "smarter" things like expanding powers or algebraicly simplifying expressions.
