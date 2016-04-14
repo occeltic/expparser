@@ -1,5 +1,7 @@
 # expparser
-A program for parsing multiple infix algebraic expressions and simplifying them into a small number of operations using expression trees. Currently recognized operations are:
+A program for parsing multiple infix algebraic expressions and simplifying them into a small number of operations using expression trees. This type of procedure in conjunction with symbolic math libraries can be very useful in situations where matrix manipulations or linear algebra are required but no linear algebra library is available.
+
+Currently recognized operations are:
 +x: POSITIVE
 -x: NEGATIVE
 x+y: ADDITION
@@ -73,3 +75,5 @@ How expparser.c does this is by building tree representations of each algebraic 
 Having this type of machine process is often useful in the context of symbolic math libraries, where closed form solutions can be found to complex problems (i.e. many matrix problems) but where the resulting formulae are so long as to be incomprehensible to a human reader. With minimal effort, expparser.c can turn this unintelligible string of symbols into usuable machine instructions which can be copy/pasted and find/changed to fit virtually any programming language.
 
 For a simple example of this process, let's say we were interested in calculating the diagonal values of the inverse matrix of an invertible 5 x 5 matrix. exampleSymbolicMath.py uses Python's sympy library to solve for these entries and writes them to exampleInput.txt in a usable format. If we then call ./expparser < exampleInput.txt > exampleOutput.txt we simplify the 5 expressions down to 431 sequential operations.
+
+While the resulting algorithm may not be as efficient as a linear algebra library, it is portable into any system which supports basic arithmetic, and in cases where many related expressions need to be evaluated (i.e. likely to have many shared subexpressions) the resulting algorithms may be competitive or superior to matrix manipulations.
