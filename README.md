@@ -28,26 +28,38 @@ outputfile.txt will contain a series of operations and substitutions followed by
 \#2 = x+z
 
 \#3 = #2^3
-#4 = #1+#3
-#5 = #2^2
-#6 = 2*#5
-#7 = #0^3
-#8 = #6-#7
-#9 = -#1
-#10 = z-x
-#11 = #10^3
-#12 = #9-#11
+
+\#4 = #1+#3
+
+\#5 = #2^2
+
+\#6 = 2*#5
+
+\#7 = #0^3
+
+\#8 = #6-#7
+
+\#9 = -#1
+
+\#10 = z-x
+
+\#11 = #10^3
+
+\#12 = #9-#11
 ---Assembly Token---
 
 ---Operator Stack---
 ---Operand Stack---
 ---Expression List---
 ---Expression 0---
-#4
+
+\#4
 ---Expression 1---
-#8
+
+\#8
 ---Expression 2---
-#12
+
+\#12
 
 How expparser.c does this is by building tree representations of each algebraic expression, and then iteratively substituting for the most common subtree in the collection of trees. There is support for the associative property (i.e. x+y is equivalent to y+x) but it won't do "smarter" things like expanding powers or algebraicly simplifying expressions.
 
